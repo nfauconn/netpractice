@@ -32,6 +32,7 @@ Reserved for so called loop back addresses:
 
 Dot decimal notation : 255.255.255.0
 Class Inter Domain Routine (CIDR): /24
+    > nb de first bits reserves
 
 | CIDR |   Dot-decimal   | IP addr / subnet | Usable IP-addr / subnet | Nb subnets |
 | ---- | --------------- | ---------------- | ----------------------- | ---------- |
@@ -44,3 +45,23 @@ Class Inter Domain Routine (CIDR): /24
 | /26  | 255.255.255.192 |       64         |          62             |       4    |
 | /25  | 255.255.255.128 |      128         |         126             |       2    |
 | /24  | 255.255.255.0   |      256         |         254             |       1    |
+
+
+| Adresse IP réservée     | Plage d'adresses IPv4             |                     | Utilisation                                 |
+|-------------------------|-----------------------------------|-----------------    |---------------------------------------------|
+| 0.0.0.0/8               | 0.0.0.0 - 0.255.255.255           |0,*                  | Réseau par défaut                           |
+| 10.0.0.0/8              | 10.0.0.0 - 10.255.255.255         |10.*                 | Réseau privé                                |
+| 100.64.0.0/10           | 100.64.0.0 - 100.127.255.255      |100.64.* - 100.127.* | Communication entre opérateurs              |
+| 127.0.0.0/8             | 127.0.0.0 - 127.255.255.255       |127.*                | Boucle locale                               |
+| 169.254.0.0/16          | 169.254.0.0 - 169.254.255.255     |169.254.*            | Configuration automatique d'adresse IP      |
+| 172.16.0.0/12           | 172.16.0.0 - 172.31.255.255       |172.16.* - 172.31.*  | Réseau privé                                |
+| 192.0.0.0/24            | 192.0.0.0 - 192.0.0.255           |192.0.0.*            | Adresses spéciales pour documentation       |
+| 192.0.2.0/24            | 192.0.2.0 - 192.0.2.255           |192.0.2.*            | Adresses de test pour documentation réseau  |
+| 192.88.99.0/24          | 192.88.99.0 - 192.88.99.255       |192.88.99.*          | Tunneling pour IPv6 sur IPv4                |
+| 192.168.0.0/16          | 192.168.0.0 - 192.168.255.255     |192.168.*            | Réseau privé                                |
+| 198.18.0.0/15           | 198.18.0.0 - 198.19.255.255       |198.18.* - 198.19.*  | Test de performance réseau                  |
+| 198.51.100.0/24         | 198.51.100.0 - 198.51.100.255     |198.51.100.*         | Adresses de test pour documentation réseau  |
+| 203.0.113.0/24          | 203.0.113.0 - 203.0.113.255       |203.0.113.*          | Adresses de test pour documentation réseau  |
+| 224.0.0.0/4             | 224.0.0.0 - 239.255.255.255       |224.* - 239.*        | Multicast                                   |
+| 240.0.0.0/4             | 240.0.0.0 - 255.255.255.254       |240.0.* - 255.*      | Réservé pour usage futur                    |
+| 255.255.255.255/32      | 255.255.255.255 - 255.255.255.255 |                     | Diffusion locale                            |
