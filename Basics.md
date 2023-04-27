@@ -34,17 +34,17 @@ Dot decimal notation : 255.255.255.0
 Class Inter Domain Routine (CIDR): /24
     > nb de first bits reserves
 
-| CIDR |   Dot-decimal   | IP addr / subnet | Usable IP-addr / subnet | Nb subnets |
-| ---- | --------------- | ---------------- | ----------------------- | ---------- |
-| /32  | 255.255.255.255 |        1         |           0             |     256    |
-| /31  | 255.255.255.254 |        2         |           1             |     128    |
-| /30  | 255.255.255.252 |        4         |           2             |      64    |
-| /29  | 255.255.255.248 |        8         |           6             |      32    |
-| /28  | 255.255.255.240 |       16         |          14             |      16    |
-| /27  | 255.255.255.224 |       32         |          30             |       8    |
-| /26  | 255.255.255.192 |       64         |          62             |       4    |
-| /25  | 255.255.255.128 |      128         |         126             |       2    |
-| /24  | 255.255.255.0   |      256         |         254             |       1    |
+| CIDR |   Dot-decimal   | Nb subnets | IP addr / subnet | Usable IP-addr / subnet | 
+| ---- | --------------- | ---------- | ---------------- | ----------------------- | 
+| /24  | 255.255.255.0   |       1    |      256         |         254             | 
+| /25  | 255.255.255.128 |       2    |      128         |         126             | 
+| /26  | 255.255.255.192 |       4    |       64         |          62             | 
+| /27  | 255.255.255.224 |       8    |       32         |          30             | 
+| /28  | 255.255.255.240 |      16    |       16         |          14             | 
+| /29  | 255.255.255.248 |      32    |        8         |           6             | 
+| /30  | 255.255.255.252 |      64    |        4         |           2             | 
+| /31  | 255.255.255.254 |     128    |        2         |           1             | 
+| /32  | 255.255.255.255 |     256    |        1         |           0             | 
 
 
 | Adresse IP réservée     | Plage d'adresses IPv4             |                     | Utilisation                                 |
@@ -65,3 +65,10 @@ Class Inter Domain Routine (CIDR): /24
 | 224.0.0.0/4             | 224.0.0.0 - 239.255.255.255       |224.* - 239.*        | Multicast                                   |
 | 240.0.0.0/4             | 240.0.0.0 - 255.255.255.254       |240.0.* - 255.*      | Réservé pour usage futur                    |
 | 255.255.255.255/32      | 255.255.255.255 - 255.255.255.255 |                     | Diffusion locale                            |
+
+
+Premiere adresse d'une plage = adresse reseau
+    > reservee a l'identification du reseau
+Derniere adresse d'une plage = adresse de diffusion (broadcast address)
+    > reservee a l'envoi de paquets a toutes les interfaces du sous-reseau
+
